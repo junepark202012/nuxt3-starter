@@ -1,5 +1,15 @@
 # Starter guide for Nuxt 3
 
+- [Starter guide for Nuxt 3](#starter-guide-for-nuxt-3)
+  - [Nuxt Configurations](#nuxt-configurations)
+  - [Modules](#modules)
+    - [Tailwind CSS](#tailwind-css)
+    - [Google Fonts](#google-fonts)
+    - [Pinia](#pinia)
+  - [VS Code](#vs-code)
+    - [Volar](#volar)
+    - [TypeScript Vue Plugin](#typescript-vue-plugin)
+
 ## Nuxt Configurations
 
 Update `nuxt.config.ts`.
