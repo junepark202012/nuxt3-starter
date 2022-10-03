@@ -37,7 +37,23 @@
 
 ## ESLint
 
-Install `@nuxtjs/eslint-config` and configure according to [github](https://github.com/nuxt/eslint-config) instructions
+[github](https://github.com/nuxt/eslint-config)
+
+- Install `@nuxtjs/eslint-config-typescript` and `eslint`
+
+  > make sure you install the typescript version according to the [docs](https://github.com/nuxt/eslint-config#typescript)
+
+- configure according to [github](https://github.com/nuxt/eslint-config) instructions
+  - As fo 2022-10-03, needed configurations are as below. Check the [docs](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) just in case.
+  ```json
+  {
+    "eslint.format.enable": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": false,
+      "source.fixAll.eslint": true
+    }
+  }
+  ```
 
 ## Nuxt Configurations
 
