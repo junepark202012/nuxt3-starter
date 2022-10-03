@@ -10,6 +10,7 @@
     - [Tailwind CSS](#tailwind-css)
     - [Google Fonts](#google-fonts)
     - [Pinia](#pinia)
+  - [Additionals](#additionals)
 
 ## VS Code
 
@@ -167,3 +168,8 @@ Update `nuxt.config.ts`.
 - You don't have to install **pinia**.
 - I got some errors once, but it just solved out by reinstalling.
   - Delete _node_modules_ and _package-lock.json_, then run `npm install`.
+
+## Additionals
+
+- Consider using **yarn** or **pnpm**
+  - [Nuxt 3 docs](https://v3.nuxtjs.org/community/contribution#package-manager)
