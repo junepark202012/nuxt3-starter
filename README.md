@@ -1,14 +1,43 @@
 # Starter guide for Nuxt 3
 
 - [Starter guide for Nuxt 3](#starter-guide-for-nuxt-3)
+  - [VS Code](#vs-code)
+    - [Volar](#volar)
+    - [TypeScript Vue Plugin](#typescript-vue-plugin)
+  - [ESLint](#eslint)
   - [Nuxt Configurations](#nuxt-configurations)
   - [Modules](#modules)
     - [Tailwind CSS](#tailwind-css)
     - [Google Fonts](#google-fonts)
     - [Pinia](#pinia)
-  - [VS Code](#vs-code)
-    - [Volar](#volar)
-    - [TypeScript Vue Plugin](#typescript-vue-plugin)
+
+## VS Code
+
+### Volar
+
+[marketplace](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+
+- Enable **takeover mode**
+
+  - [Vue 3 docs](https://vuejs.org/guide/typescript/overview.html#volar-takeover-mode)
+  - [Nuxt 3 docs](https://v3.nuxtjs.org/getting-started/installation#prerequisites)
+
+- Check [tips](https://github.com/johnsoncodehk/volar/discussions/53)
+- Recommended extension settings
+
+  ```json
+  "volar.autoCompleteRefs": true,
+  ```
+
+### TypeScript Vue Plugin
+
+[marketplace](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
+
+> 💡 The [Nuxt 3 docs](https://v3.nuxtjs.org/getting-started/installation#prerequisites) have a vague description, but you need to install both **Volar** and the **Typescript Vue Plugin**. Check the related [github issue](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1369954).
+
+## ESLint
+
+Install `@nuxtjs/eslint-config` and configure according to [github](https://github.com/nuxt/eslint-config) instructions
 
 ## Nuxt Configurations
 
@@ -121,27 +150,3 @@ Update `nuxt.config.ts`.
 - You don't have to install **pinia**.
 - I got some errors once, but it just solved out by reinstalling.
   - Delete _node_modules_ and _package-lock.json_, then run `npm install`.
-
-## VS Code
-
-### Volar
-
-[marketplace](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-
-- Enable **takeover mode**
-
-  - [Vue 3 docs](https://vuejs.org/guide/typescript/overview.html#volar-takeover-mode)
-  - [Nuxt 3 docs](https://v3.nuxtjs.org/getting-started/installation#prerequisites)
-
-- Check [tips](https://github.com/johnsoncodehk/volar/discussions/53)
-- Recommended extension settings
-
-  ```json
-  "volar.autoCompleteRefs": true,
-  ```
-
-### TypeScript Vue Plugin
-
-[marketplace](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
-
-> 💡 The [Nuxt 3 docs](https://v3.nuxtjs.org/getting-started/installation#prerequisites) have a vague description, but you need to install both **Volar** and the **Typescript Vue Plugin**. Check the related [github issue](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1369954).
