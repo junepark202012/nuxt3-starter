@@ -5,9 +5,10 @@ import type { NuxtConfig } from '@nuxt/schema'
 const nuxtConfig: NuxtConfig = {
   css: ['~/assets/css/main.css'],
   modules: [
+    ['@pinia/nuxt', { autoImports: ['defineStore'] }],
+    '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',
-    ['@pinia/nuxt', { autoImports: ['defineStore'] }],
   ],
   typescript: {
     shim: false,

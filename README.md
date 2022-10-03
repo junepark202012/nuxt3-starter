@@ -149,8 +149,8 @@ Update `nuxt.config.ts`.
       }
       ```
 
-   2. You don't have to do any configurations such as linking `tailwind.css` which contains  `@tailwind` rules. Its' imported from default automatically.
-   3. No need to configure `tailwindcss.config.js`
+   2. Add `@tailwind` to `main.css`. No need to create a separate `tailwind.css`file. If you don't use any `@layer` css rules relate to `base`, `component` or `utilities`, you don't need to add `@tailwind` rules at all since they're auto imported.
+   3. Add `darkMode: 'class'` `tailwindcss.config.js` This is needed because it will give more specifity to `dark:` classes in dark mode. It's described in [tailwindcss v2 docs](https://v2.tailwindcss.com/docs/dark-mode#specificity-considerations).
 
 4. If you're using **VS Code**, make sure you're folloiwng the [marketplace guidelines](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss), such as adding extension settings. As of date **2022-10-02, v0.8.7** there are only 3 configuration recommendations.
 
