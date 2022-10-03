@@ -95,7 +95,7 @@ Update `nuxt.config.ts`.
 
   - [Nuxt 3 docs](https://v3.nuxtjs.org/api/configuration/nuxt.config#css)
 
-- Install `vue-tsc` manually(not included in Nuxt 3)
+- ~~Install `vue-tsc` manually(not included in Nuxt 3)~~
 
   - [npm docs](https://www.npmjs.com/package/vue-tsc)
   - [Nuxt 3 docs](https://v3.nuxtjs.org/api/commands/typecheck#nuxi-typecheck)
