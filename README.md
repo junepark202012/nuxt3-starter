@@ -37,6 +37,7 @@
 
 ## ESLint
 
+[Nuxt 3 docs](https://v3.nuxtjs.org/community/contribution#use-eslint)
 [github](https://github.com/nuxt/eslint-config)
 
 - Install `@nuxtjs/eslint-config-typescript` and `eslint`
