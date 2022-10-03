@@ -8,7 +8,7 @@
   - [ESLint](#eslint)
     - [Anthony Fu's Settings](#anthony-fus-settings)
     - [Nuxt plugin](#nuxt-plugin)
-    - [VS Code](#vs-code-1)
+    - [ES Lint - VS Code](#es-lint---vs-code)
   - [Nuxt Configurations](#nuxt-configurations)
   - [Modules](#modules)
     - [Tailwind CSS](#tailwind-css)
@@ -40,8 +40,14 @@
 - Recommended extension settings
 
   ```json
+  // settings.json
   "volar.autoCompleteRefs": true,
   ```
+
+- You might have *Vue3 Extraneous non-emits event listeners* related errors when using the **preview** menu in VS Code.
+  - This is because the root level HTML element is not wrapped in a single tag.
+  - This wasn't allowed in **Vue 2**, but is [allowed in Vue 3](https://v3-migration.vuejs.org/new/fragments.html#fragments)
+  - Just wrap the top level element with a single tab, such as a `div`
 
 ### TypeScript Vue Plugin
 
@@ -68,12 +74,13 @@
 
   > ~~make sure you install the typescript version according to the [docs](https://github.com/nuxt/eslint-config#typescript)~~
 
-### VS Code
+### ES Lint - VS Code
 
 - Configure VS Code according to [vscode extension docs](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
   - As fo 2022-10-03, needed configurations are as below. Check the [docs](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) just in case.
 
   ```json
+  // settings.json
   {
     "eslint.format.enable": true,
     "editor.codeActionsOnSave": {
@@ -90,12 +97,14 @@ Update `nuxt.config.ts`.
 - Create `main.css` and add link in head
 
   ```typescript
+  // nuxt.config.ts
   css: ["~/assets/css/main.css"];
   ```
 
   - [Nuxt 3 docs](https://v3.nuxtjs.org/api/configuration/nuxt.config#css)
 
-- ~~Install `vue-tsc` manually(not included in Nuxt 3)~~
+- Install `vue-tsc` manually(not included in Nuxt 3)
+  - You need this to enable `typescript.typeCheck` option
 
   - [npm docs](https://www.npmjs.com/package/vue-tsc)
   - [Nuxt 3 docs](https://v3.nuxtjs.org/api/commands/typecheck#nuxi-typecheck)
@@ -103,6 +112,7 @@ Update `nuxt.config.ts`.
 - Configure typescript
 
   ```typescript
+  // nuxt.config.ts
   typescript: {
     shim: false, // Needed for Volar takeover mode
     strict: true,
@@ -123,29 +133,29 @@ Update `nuxt.config.ts`.
 > [Official docs, getting started](https://tailwindcss.nuxtjs.org/getting-started/setup)
 
 1. Install module
-2. Add configurations
+2. Install webpack(when using **pnpm**, it requires **Webpack5** as a dependency)
+3. Add configurations
 
    1. `nuxt.config.ts`
 
       ```typescript
+      // nuxt.config.ts
       modules: ["@nuxtjs/tailwindcss"],
       tailwindcss: {
       // Unnecessary if you are using .js for your tailwind.config file
       configPath: "~/tailwind.config.ts",
-      // Warnings occur with tailwind config viewer. It opens on the same port as devserver.
+      // Unnecessary if your viewer works without error.
       viewer: false,
       }
       ```
 
-   2. `tailwind.config.{js, ts}`
+   2. You don't have to do any configurations such as linking `tailwind.css` which contains  `@tailwind` rules. Its' imported from default automatically.
+   3. No need to configure `tailwindcss.config.js`
 
-      ```typescript
-      content: ["~/assets/**/*.{vue, js, ts, jsx, tsx}"],
-      ```
-
-3. If you're using **VS Code**, make sure you're folloiwng the [marketplace guidelines](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss), such as adding extension settings. As of date **2022-10-02, v0.8.7** there are only 3 configuration recommendations.
+4. If you're using **VS Code**, make sure you're folloiwng the [marketplace guidelines](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss), such as adding extension settings. As of date **2022-10-02, v0.8.7** there are only 3 configuration recommendations.
 
    ```json
+   // settings.json
    "files.associations": {
      "*.css": "tailwindcss"
    },
@@ -169,13 +179,13 @@ Update `nuxt.config.ts`.
    1. `nuxt.config.ts`
 
       ```typescript
+      // nuxt.config.ts
       modules: [@nuxtjs/google-fonts],
       googleFonts: {
         families: {
-          \\ ...
+          //...
         }
       }
-
       ```
 
    2. Additional configurations will be unnecessary(`display`, `prefetch`, etc.). It seems like they're all following [best practices](https://web.dev/font-best-practices/).
