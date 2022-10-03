@@ -1,8 +1,14 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 
-const nuxtConfig = {
+import type { NuxtConfig } from '@nuxt/schema'
+
+const nuxtConfig: NuxtConfig = {
   css: ['~/assets/css/main.css'],
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts',
+    ['@pinia/nuxt', { autoImports: ['defineStore'] }],
+  ],
   typescript: {
     shim: false,
     strict: true,
