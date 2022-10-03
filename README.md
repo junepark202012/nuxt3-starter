@@ -1,16 +1,29 @@
 # Starter guide for Nuxt 3
 
 - [Starter guide for Nuxt 3](#starter-guide-for-nuxt-3)
+  - [Recommended Package manager](#recommended-package-manager)
   - [VS Code](#vs-code)
     - [Volar](#volar)
     - [TypeScript Vue Plugin](#typescript-vue-plugin)
   - [ESLint](#eslint)
+    - [Anthony Fu's Settings](#anthony-fus-settings)
+    - [Nuxt plugin](#nuxt-plugin)
+    - [VS Code](#vs-code-1)
   - [Nuxt Configurations](#nuxt-configurations)
   - [Modules](#modules)
     - [Tailwind CSS](#tailwind-css)
     - [Google Fonts](#google-fonts)
     - [Pinia](#pinia)
   - [Additionals](#additionals)
+
+## Recommended Package manager
+
+- If you're using **pnpm**, follow the guides below
+  - [Installation](https://v3.nuxtjs.org/getting-started/installation#new-project)
+  - [Enable Corepack](https://v3.nuxtjs.org/community/contribution#package-manager)
+  - As fo 2022-10-03, you have to be aware of the following items
+    - ⭐ `pnpm install` with flag `--shamefully-hoist`
+    - ~~Initialize project with pnpm~~*(probably not required)*
 
 ## VS Code
 
@@ -38,15 +51,28 @@
 
 ## ESLint
 
+### Anthony Fu's Settings
+
+[Github](https://github.com/antfu/eslint-config)
+
+- Install Anthony's eslint settings. (It also supports [npm](@antfu/eslint-config))
+
+### Nuxt plugin
+
 [Nuxt 3 docs](https://v3.nuxtjs.org/community/contribution#use-eslint)
 [github](https://github.com/nuxt/eslint-config)
 
-- Install `@nuxtjs/eslint-config-typescript` and `eslint`
+- ❗The plugin also uses vue2 specific settings, and gives a lot of unnecessary errors(probably due to using `plugin:vue/recommended`). Don't use for now.
 
-  > make sure you install the typescript version according to the [docs](https://github.com/nuxt/eslint-config#typescript)
+  ~~Install `@nuxtjs/eslint-config-typescript` and `eslint`~~
 
-- configure according to [github](https://github.com/nuxt/eslint-config) instructions
+  > ~~make sure you install the typescript version according to the [docs](https://github.com/nuxt/eslint-config#typescript)~~
+
+### VS Code
+
+- Configure VS Code according to [vscode extension docs](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
   - As fo 2022-10-03, needed configurations are as below. Check the [docs](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) just in case.
+
   ```json
   {
     "eslint.format.enable": true,
@@ -167,7 +193,7 @@ Update `nuxt.config.ts`.
 
 - You don't have to install **pinia**.
 - I got some errors once, but it just solved out by reinstalling.
-  - Delete _node_modules_ and _package-lock.json_, then run `npm install`.
+  - Delete *node_modules* and *package-lock.json*, then run `npm install`.
 
 ## Additionals
 
