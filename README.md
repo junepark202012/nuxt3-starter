@@ -16,7 +16,7 @@
     - [Pinia](#pinia)
   - [Additionals](#additionals)
   - [Tailwind UI](#tailwind-ui)
-  - [Iconify](#iconify)
+  - [Nuxt-icon](#nuxt-icon)
 
 ## Recommended Package manager
 
@@ -216,14 +216,11 @@ Update `nuxt.config.ts`.
 
 ## Tailwind UI
 
-- Install according to [documentation](https://tailwindui.com/documentation)
+- Install according to the [docs](https://tailwindui.com/documentation)
   - `@headlessui/vue`
   - `@heroicons/vue`
 
-## Iconify
+## Nuxt-icon
 
-Install according to the [docs](https://docs.iconify.design/icon-components/vue/#installation)
-
-- You can use Iconify's Vue components.
-  - But if you SSR, HTML will not include SVGs, they will be dynamically added only when hydrating DOM on client side.
-- But consider the [link](https://docs.iconify.design/icon-components/vue/#ssr) if you're considering SSR icon files.
+- Install and cofig according to the [docs](https://github.com/nuxt-modules/icon)
+  - You might have to also install `@iconify/vue`, as it shows add a peer depdency error in **pnpm**
