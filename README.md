@@ -135,6 +135,8 @@ Update `nuxt.config.ts`.
 > [Official docs, getting started](https://tailwindcss.nuxtjs.org/getting-started/setup)
 
 1. Install module
+   1. You also have to install `tailwindcss` in order to add it to `package.json`
+      1. The folder `tailwindcss` is will be automatically created even if you only install `@nuxtjs/tailwindcss`, but to ad it as a devDep in `package.json`, you have to install.
 2. Install webpack(when using **pnpm**, it requires **Webpack5** as a dependency)
 3. Add configurations
 
