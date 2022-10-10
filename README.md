@@ -221,6 +221,9 @@ Update `nuxt.config.ts`.
 - Install according to the [docs](https://tailwindui.com/documentation)
   - `@headlessui/vue`
   - `@heroicons/vue`
+- Also, install `@headlessui/tailwindcss`
+  - This is used to target some headlessui attributes.
+  - [Github](https://github.com/tailwindlabs/headlessui/tree/main/packages/%40headlessui-tailwindcss)
 
 ## Nuxt-icon
 
